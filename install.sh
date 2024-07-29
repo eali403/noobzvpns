@@ -75,14 +75,14 @@ cp $RESOURCES/$BINARY_ARCH $BIN/noobzvpns
 cp $RESOURCES/cert.pem $CONFIGS/cert.pem
 cp $RESOURCES/key.pem $CONFIGS/key.pem
 cp $RESOURCES/noobzvpns.service $SYSTEMD/noobzvpns.service
-if [ ! -f $CONFIGS/config.json ]; then
-    cp $RESOURCES/config.json $CONFIGS/config.json
+if [ ! -f $CONFIGS/config.toml ]; then
+    cp $RESOURCES/config.toml $CONFIGS/config.toml
 fi
 
 echo "Setting files permission..."
 chmod 700 $BIN/noobzvpns
 chmod 600 $CONFIGS/cert.pem
-chmod 600 $CONFIGS/config.json
+chmod 600 $CONFIGS/config.toml
 chmod 600 $CONFIGS/key.pem
 chmod 600 $SYSTEMD/noobzvpns.service
 
